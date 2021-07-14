@@ -9,6 +9,11 @@ class Banco
     const CEF = 104;
     const BRADESCO = 237;
     const ITAU = 341;
+    const SICOOB = 756;
+    const BANRISUL = 41;
+    const SICREDI = 748;
+    const UNIPRIME = 84;
+    const CECRED = 85;
 
     public static function getBanco($codigo)
     {
@@ -36,6 +41,31 @@ class Banco
             return array(
                 'codigo_do_banco' => self::BRADESCO,
                 'nome_do_banco' => 'BRADESCO',
+            );
+        } elseif ($codigo == self::SICOOB) {
+            return array(
+                'codigo_do_banco' => self::SICOOB,
+                'nome_do_banco' => 'SICOOB',
+            );
+        } elseif ($codigo == self::BANRISUL) {
+            return array(
+                'codigo_do_banco' => self::BANRISUL,
+                'nome_do_banco' => 'BANRISUL',
+            );
+        } elseif ($codigo == self::SICREDI) {
+            return array(
+                'codigo_do_banco' => self::SICREDI,
+                'nome_do_banco' => 'SICREDI',
+            );
+        } elseif ($codigo == self::UNIPRIME) {
+            return array(
+                'codigo_do_banco' => self::UNIPRIME,
+                'nome_do_banco' => 'UNIPRIME',
+            );
+        } elseif ($codigo == self::CECRED) {
+            return array(
+                'codigo_do_banco' => self::CECRED,
+                'nome_do_banco' => 'CECRED',
             );
         } else {
             return false;

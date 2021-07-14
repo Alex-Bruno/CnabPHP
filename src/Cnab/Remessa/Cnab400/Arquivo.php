@@ -140,10 +140,10 @@ class Arquivo implements \Cnab\Remessa\IArquivo
                 $detalhe->qtde_moeda = '0'; # Este campo deverá ser preenchido com zeros caso a moeda seja o Real.
                 $detalhe->codigo_carteira = 'I';
                 $detalhe->uso_banco = '';
-                $detalhe->data_mora = $boleto['data_multa'];
+                $detalhe->data_mora = (isset($boleto['data_mora']) ? $boleto['data_mora'] : $boleto['data_multa']) ;
 
                 if ($boleto['valor_multa'] > 0) {
-                    /*
+                   
                     // Não está presente na documentação disponibilizada no site
                     // os valores de multa devem ser configurados com o gerente da sua conta
                     $detalheMulta = new DetalheMulta($this);
@@ -156,8 +156,8 @@ class Arquivo implements \Cnab\Remessa\IArquivo
                     $detalheMulta->data_multa = $boleto['data_multa'];
                     $detalheMulta->valor_multa = $boleto['valor_multa'];
                     $complementos[] = $detalheMulta;
-                    */
-                }
+                  
+               }
             }
 
             /*
