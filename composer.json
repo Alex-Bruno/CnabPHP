@@ -4,6 +4,12 @@
     "description": "Projeto para criar arquivos de remessas e processar arquivos de retorno no formato CNAB",
     "keywords": ["boleto", "remessa", "retorno"],
     "licence": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Alex-Bruno/cnab_yaml/"
+        }
+    ],
     "authors": [
         {
             "name": "Anderson Danilo",
