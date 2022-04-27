@@ -14,6 +14,7 @@ class Banco
     const SICREDI = 748;
     const UNIPRIME = 84;
     const CECRED = 85;
+    const CRESOL = 133;
 
     public static function getBanco($codigo)
     {
@@ -67,6 +68,11 @@ class Banco
                 'codigo_do_banco' => self::CECRED,
                 'nome_do_banco' => 'CECRED',
             );
+        } elseif ($codigo == self::CRESOL) {
+            return array(
+                'codigo_do_banco' => self::CRESOL,
+                'nome_do_banco' => 'CRESOL',
+            );
         } else {
             return false;
         }
@@ -79,3 +85,4 @@ class Banco
         return $banco ? true : false;
     }
 }
+

@@ -400,6 +400,68 @@ class Detalhe extends \Cnab\Format\Linha implements \Cnab\Retorno\IDetalhe
             } elseif (99 == $codigo) {
                 return 'Rejeição do Título – Cód. Rejeição informado nas POS 80 a 82';
             }
+        } elseif (\Cnab\Banco::CRESOL == $this->_codigo_banco) {
+            if (2 == $codigo) {
+                return 'Entrada Confirmada';
+            } elseif (3 == $codigo) {
+                return 'Entrada Rejeitada';
+            } elseif (6 == $codigo) {
+                return 'Liquidação normal';
+            } elseif (9 == $codigo) {
+                return 'Baixado Automat. via Arquivo';
+            } elseif (10 == $codigo) {
+                return 'Baixado conforme instruções da Agência';
+            } elseif (11 == $codigo) {
+                return 'Em Ser - Arquivo de Títulos pendentes';
+            } elseif (12 == $codigo) {
+                return 'Abatimento Concedido';
+            } elseif (13 == $codigo) {
+                return 'Abatimento Cancelado';
+            } elseif (14 == $codigo) {
+                return 'Vencimento Alterado';
+            } elseif (15 == $codigo) {
+                return 'Liquidação em Cartório';
+            } elseif (16 == $codigo) {
+                return 'Título Pago em Cheque – Vinculado';
+            } elseif (17 == $codigo) {
+                return 'Liquidação após baixa ou Título não registrado';
+            } elseif (18 == $codigo) {
+                return 'Acerto de Depositária (sem motivo)';
+            } elseif (19 == $codigo) {
+                return 'Confirmação Receb. Inst. de Protesto';
+            } elseif (20 == $codigo) {
+                return 'Confirmação Recebimento Instrução Sustação de Protesto';
+            } elseif (21 == $codigo) {
+                return 'Acerto do Controle do Participante';
+            } elseif (22 == $codigo) {
+                return 'Título Com Pagamento Cancelado';
+            } elseif (23 == $codigo) {
+                return 'Entrada do Título em Cartório';
+            } elseif (24 == $codigo) {
+                return 'Entrada rejeitada por CEP Irregular';
+            } elseif (27 == $codigo) {
+                return 'Baixa Rejeitada';
+            } elseif (28 == $codigo) {
+                return 'Débito de tarifas/custas';
+            } elseif (30 == $codigo) {
+                return 'Alteração de Outros Dados Rejeitados';
+            } elseif (32 == $codigo) {
+                return 'Instrução Rejeitada';
+            } elseif (33 == $codigo) {
+                return 'Confirmação Pedido Alteração Outros Dados';
+            } elseif (34 == $codigo) {
+                return 'Retirado de Cartório e Manutenção Carteira';
+            } elseif (35 == $codigo) {
+                return 'Desagendamento do débito automático';
+            } elseif (40 == $codigo) {
+                return 'Estorno de pagamento';
+            } elseif (55 == $codigo) {
+                return 'Sustado judicial';
+            } elseif (68 == $codigo) {
+                return 'Acerto dos dados do rateio de Crédito';
+            } elseif (69 == $codigo) {
+                return 'Cancelamento dos dados do rateio';
+            }
         } else {
             if ($codigo == 2) {
                 return 'ENTRADA CONFIRMADA COM POSSIBILIDADE DE MENSAGEM (NOTA 20 – TABELA 10) ';
